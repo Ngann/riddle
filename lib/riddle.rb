@@ -9,10 +9,15 @@ class Riddle
       4 => "RIVERBED"
     }
 
+
   end
 
+  # def question_number
+  #   return @questions_test = @questions.fetch(1)
+  # end
+
   def is_true?
-    answers_test = @answers.fetch(@random_number)
+    answers_test = @answers.fetch(@@random_number)
     if (@answer_one === answers_test)
       return true
     else

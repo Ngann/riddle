@@ -4,10 +4,11 @@ also_reload('lib/**/*.rb')
 require('./lib/riddle')
 require('./lib/questions')
 
+
 get('/') do
-  @random_number = rand(1..4)
-  riddle_test = QuestionAnswers.new(@random_number)
-  @other_test = riddle_test.random_riddle
+  riddle_test = QuestionAnswers.new()
+  @@random_number = rand(1..4)
+  @other_test = riddle_test.random_riddle(@@random_number)
   erb(:input)
 end
 

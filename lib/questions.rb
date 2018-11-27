@@ -7,11 +7,10 @@ class QuestionAnswers
     3 => "What does a snowman like to eat for breakfast?",
     4 => "I have a mouth but do not speek, I have a bed but do not sleep, I run everywhere but go no where, what am I"
   }
-
-
   end
 
   def random_riddle(random)
-    return @questions = @questions.fetch(random)
+    return @questions_test = @questions.fetch(random)
   end
+  
 end
