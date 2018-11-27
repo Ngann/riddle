@@ -6,8 +6,9 @@ require('./lib/questions')
 
 
 get('/') do
+  # The two @s basically make this a global variable
+  @@random_number = rand(1..4) 
   riddle_test = QuestionAnswers.new()
-  @@random_number = rand(1..4)
   @other_test = riddle_test.random_riddle(@@random_number)
   erb(:input)
 end
